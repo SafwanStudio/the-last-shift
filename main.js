@@ -32,7 +32,11 @@ function createWindow() {
 
   // The game is fully offline: never open or navigate to external pages.
   win.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
-  win.webContents.on('will-navigate', (event) => event.preventDefault());
+  win.webContents.on('will-navigate', (event, url) => {
+    if (!url.startsWith('file:')) {
+      event.preventDefault();
+    }
+  });
 }
 
 app.whenReady().then(createWindow);
