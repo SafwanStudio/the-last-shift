@@ -16,12 +16,13 @@
     "productName": "TheLastShift",
     "files": [
       "main.js",
-      "index.html"
+      "index.html",
+      "icon.ico"
     ],
     "win": {
       "target": "portable",
       "artifactName": "TheLastShift-${version}.exe",
-      "icon": "build/icon.ico"
+      "icon": "icon.ico"
     }
   }
 }

@@ -11,6 +11,7 @@ function createWindow() {
     backgroundColor: '#000000',
     autoHideMenuBar: true,
     title: 'The Last Shift',
+    icon: path.join(__dirname, 'icon.ico'),
     webPreferences: {
       autoplayPolicy: 'no-user-gesture-required',
       contextIsolation: true,
